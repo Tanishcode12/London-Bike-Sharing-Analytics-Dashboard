@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London Bike Sharing Analytics Dashboard</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Full-width Banner Header */
+        header {
+            background-color: #112233; 
+            color: #ffffff;
+            padding: 2.5rem 5%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.6rem;
+        }
+
+        header h1 span {
+            color: #00d1b2; 
+        }
+
+        header p {
+            margin: 0.7rem 0 0 0;
+            font-size: 1.2rem;
+            color: #a3b8cc;
+        }
+
+        /* Main Content wrapper - stretches wide across the screen */
+        .content-wrapper {
+            max-width: 95%; /* Expands the page layout to prevent the column effect */
+            width: 1400px;  /* Upper limit for massive screens */
+            margin: 2rem auto;
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+
+        /* Features Section */
+        .project-features {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-left: 5px solid #00d1b2;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        .project-features h2 {
+            margin-top: 0;
+            color: #112233;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-card {
+            background: #f8fafc;
+            padding: 1.2rem;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .feature-card h3 {
+            margin: 0 0 0.5rem 0;
+            color: #00a38d;
+        }
+
+        .feature-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #4a5568;
+        }
+
+        /* WIDE DASHBOARD CONTAINER */
+        .dashboard-container {
+            width: 100%; /* Forces the container to be full-width */
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-sizing: border-box;
+            margin-bottom: 4rem;
+        }
+
+        /* Forces Tableau's internal elements to respect the width */
+        .dashboard-container iframe, 
+        .dashboard-container object, 
+        .dashboard-container .tableauPlaceholder {
+            width: 100% !important;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #112233;
+            color: #718096;
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 0.9rem;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><span>London Bike Sharing</span> Demand Analysis</h1>
+        <p>An interactive study of weather conditions and ridership trends</p>
+    </header>
+
+    <div class="content-wrapper">
+        
+        <section class="project-features">
+            <h2>Dashboard Features & Insights</h2>
+            <p>Explore the interactive dashboard below to uncover how environmental factors shape cycling habits across London.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🚲 Total Ridership</h3>
+                    <p>Track the baseline volume of bikes ridden across your selected timeframes.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌡️ Weather Heatmap</h3>
+                    <p>Correlate Temperature vs. Wind Speed within specific dates to see which weather matrix halts or promotes cycling.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📈 Trend Toggle & Moving Average</h3>
+                    <p>Switch seamlessly between Day, Month, and Year granularities, select custom ranges, and adjust the moving average.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WIDE DASHBOARD SECTION -->
+        <section class="dashboard-container">
+            
+            <!-- PASTE YOUR TABLEAU EMBED CODE DIRECTLY BELOW THIS LINE -->
+            <div class='tableauPlaceholder' id='viz1778872120968' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_17788718213520&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Book1_17788718213520&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_17788718213520&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1778872120968');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1466px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1466px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='1177px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script> 
+            
+            <!-- PASTE YOUR TABLEAU EMBED CODE DIRECTLY ABOVE THIS LINE -->
+            
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 | London Bike Sharing Analytics Portfolio</p>
+    </footer>
+
+</body>
+</html>
